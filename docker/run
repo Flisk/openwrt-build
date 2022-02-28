@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+image=openwrt-build:latest
+
+docker build --tag=$image ./docker
+docker run \
+	--interactive --tty --rm \
+	--volume=$PWD:/build \
+	--workdir=/build \
+	$image bash
