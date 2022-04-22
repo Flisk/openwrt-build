@@ -6,5 +6,5 @@ docker build --tag=$image ./docker
 docker run \
 	--interactive --tty --rm \
 	--volume=$PWD:/build \
-	--workdir=/build \
+	--workdir=/build/openwrt \
 	$image bash
